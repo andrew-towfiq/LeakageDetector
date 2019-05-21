@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/menu/bookmarks_menu.xml",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/menu/bookmarks_menu.xml"
+    }
+]

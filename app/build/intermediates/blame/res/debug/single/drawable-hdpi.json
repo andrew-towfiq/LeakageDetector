@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_wfm.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_demod_wfm.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_pause.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_pause.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_record_off.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_record_off.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_lsb.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_demod_lsb.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_usb.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_demod_usb.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_play.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_play.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_nfm.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_demod_nfm.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_important.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_important.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_frequency.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_frequency.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_am.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_demod_am.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_record_on.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_record_on.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_full_screen.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_full_screen.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_gain.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_gain.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_off.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_demod_off.png"
+    }
+]

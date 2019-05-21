@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: hackrf_android::null">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/RFAnalyzer/hackrf_android/unspecified/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/RFAnalyzer/hackrf_android/unspecified/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
