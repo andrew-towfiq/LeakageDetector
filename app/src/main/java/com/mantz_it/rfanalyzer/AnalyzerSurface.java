@@ -8,6 +8,7 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Shader;
+import android.location.Location;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -139,6 +140,8 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 	private int fontSize = FONT_SIZE_MEDIUM;		// Indicates the font size of the grid labels
 	private boolean showDebugInformation = false;
 
+	private MyLocatoinProxy location = null;
+
 
 	/**
 	 * Constructor. Will initialize the Paint instances and register the callback
@@ -146,7 +149,7 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 	 *
 	 * @param context
 	 */
-	public AnalyzerSurface(Context context, RFControlInterface rfControlInterface) {
+	public AnalyzerSurface(Context context, RFControlInterface rfControlInterface, MyLocatoinProxy location) {
 		super(context);
 		this.rfControlInterface = rfControlInterface;
 		this.defaultPaint = new Paint();
@@ -170,6 +173,12 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 		this.channelWidthSelectorPaint.setColor(Color.WHITE);
 		this.squelchPaint = new Paint();
 		this.squelchPaint.setColor(Color.RED);
+		this.location = location;
+
+		// DELETE ME
+		if (null == this.location) {
+			throw  new RuntimeException("SOME EXCEPTION!!!!");
+		}
 
 		// Add a Callback to get informed when the dimensions of the SurfaceView changes:
 		this.getHolder().addCallback(this);
@@ -898,6 +907,14 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 	}
 
 	/**
+	 * return the width of the Power bar indicator
+	 * @return width (in px) of the power bar indicator
+	 */
+	private int getPowerBarWidth() {
+		return (int) (width*0.14f);
+	}
+
+	/**
 	 * Returns the height/width of the frequency/power grid in px
 	 *
 	 * @return size of the grid (frequency grid height / power grid width) in px
@@ -1059,8 +1076,9 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 					drawPowerLevel(c, power);
 					drawPowerLevelStatistics(c, power);
 					drawPowerGrid(c);
-					drawPowerGridForNoise(c);
+					drawPowerGridForNoise(c, power);
 					drawPerformanceInfo(c, frameRate, load, averageSignalStrengh);
+				//	drawPowerMeter(c, power);
 				} else
 					Log.d(LOGTAG, "draw: Canvas is null.");
 			}
@@ -1080,9 +1098,7 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 	}
 
 
-	private void drawPowerMeter(Canvas c, double power){
 
-	}
 
 	/**
 	 * This method will draw the fft onto the canvas. It will also update the bitmap in
@@ -1363,7 +1379,7 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 	 */
 	private void drawPowerGrid(Canvas c) {
 		// Calculate pixel height of a minor tick (1dB)
-		float pixelPerMinorTick = (float) (getFftHeight() / (maxDB-minDB));
+		float pixelPerMinorTick = getPixelPerDb(minDB, maxDB, getFftHeight());
 
 		// Draw the ticks from the top to the bottom. Stop as soon as we interfere with the frequency scale
 		int tickDB = (int) maxDB;
@@ -1394,8 +1410,42 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 	private void drawPowerLevel(Canvas c, double power) {
 		// Clear the fft area in the canvas:
 		c.drawRect(0, getFftHeight(), width, height, blackPaint);
+		// draw power indicator
+		drawPowerIndicator(c, getGridSize()+width*0.06f, power);
+
+	}
+
+	private void drawPowerIndicator(Canvas c, float x ,double power) {
+		float guardInterval = width*0.02f; // distance between power bar and outer lines;
+		float barWidth = width*0.1f; // width of the indicator bar;
+
+		float pixelsPerDb = getPixelPerDb(minDBP,maxDBP,getWaterfallHeight());
 
 
+		float y = (float)(maxDBP-power)*pixelsPerDb + getFftHeight(); // calculate y coordinate based on power;
+
+		Paint paint = textPaint;
+		c.drawLine(x,getFftHeight(),x,height,paint);
+		c.drawLine(x+getPowerBarWidth(),getFftHeight(),x+getPowerBarWidth(),height,paint);
+		Rect barRectangle = new Rect();
+		barRectangle.set((int)(x+guardInterval),(int)y,(int)(x+guardInterval+barWidth),height);
+		c.drawRect(barRectangle, paint);
+	}
+
+	/**
+	 * Draw text allighned to right side
+	 * @param c - Canvas
+	 * @param x - right border of the text
+	 * @param y - y coordinate of the text
+	 * @param text - text
+	 * @param paint - paint for drawing text on Canvas
+	 * @return new y offset based on height of the text leaving 10% of the text height as a gap for next line
+	 */
+	private float drawTextRightAlligned(Canvas c, float x, float y, String text, Paint paint) {
+		Rect bounds = new Rect();
+		paint.getTextBounds(text,0,text.length(), bounds);
+		c.drawText(text, x-bounds.width(),y,paint);
+		return y+bounds.height()*1.1f;
 	}
 
 	private void drawPowerLevelStatistics(Canvas c, double power) {
@@ -1403,14 +1453,30 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 		Rect bounds = new Rect();
 		textPaint.getTextBounds(text, 0, text.length(), bounds);
 		float rightBorder = width * 0.99f;
-		float yPos=getFftHeight()+height*0.01f+bounds.height(); //
+		float yPos = getFftHeight() + height * 0.01f + bounds.height(); //
 
 		if (null != source) {
 			text = String.format("%.1f", power);
-			textPaint.getTextBounds(text, 0, text.length(), bounds);
-			c.drawText(text, rightBorder - bounds.width(), yPos, textPaint);
-			//yPos += bounds.height()*1.1f;
+			yPos = drawTextRightAlligned(c, rightBorder, yPos, text, textPaint);
 		}
+		double longitude = -123.888;
+		double latitude = -87.8889;
+		double acc = 90.2;
+
+		Location loc = location.getLocation();
+		if (null != loc) {
+			longitude = loc.getLongitude();
+			latitude = loc.getLatitude();
+			acc = loc.getAccuracy();
+		}
+	//	longitude = -123.888;
+	//	latitude = -87.8889;
+	//	acc = 30.2;
+
+		yPos = drawTextRightAlligned(c, rightBorder, yPos, String.format("Lat: %.5f", latitude), textSmallPaint);
+		yPos = drawTextRightAlligned(c, rightBorder, yPos, String.format("Long: %.5f", longitude), textSmallPaint);
+		yPos = drawTextRightAlligned(c, rightBorder, yPos, String.format("Acc: %.5f", acc), textSmallPaint);
+
 	}
 
 	/**
@@ -1541,9 +1607,14 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 
 	//Our changes
 
-	private void drawPowerGridForNoise(Canvas c) {
+	private float getPixelPerDb(float minValue, float maxValue, float totalHeight) {
+		return (float) totalHeight/ (maxValue-minValue);
+	}
+
+	private void drawPowerGridForNoise(Canvas c, double power) {
 		// Calculate pixel height of a minor tick (1dB)
-		float pixelPerMinorTick = (float) (getWaterfallHeight() / (maxDBP-minDBP));
+//		float pixelPerMinorTick = (float) (getWaterfallHeight() / (maxDBP-minDBP));
+		float pixelPerMinorTick = getPixelPerDb(minDBP, maxDBP, getWaterfallHeight());
 
 		// Draw the ticks from the top to the bottom. Stop as soon as we interfere with the frequency scale
 		int tickDB = (int) maxDBP;
@@ -1563,10 +1634,24 @@ public class AnalyzerSurface extends SurfaceView implements SurfaceHolder.Callba
 				// Minor tick
 				tickWidth = (float) (getGridSize() / 5.0);
 			}
+		//	if(tickDB == power){
+
+			//	c.drawLine(startPoint + 5.0f,tickDB, startPoint + 20.0f, tickDB, fftPaint);
+		//	}
 			c.drawLine(0, tickPos, tickWidth, tickPos, textPaint);
 			tickPos += pixelPerMinorTick;
 
 		}
+	}
+
+
+	private void drawPowerMeter(Canvas c, double power){
+		float tickWidth = (float) (getGridSize()/3.0);
+
+		c.drawLine(tickWidth + 5.0f,(float) power, tickWidth + 20.0f, (float)power, fftPaint);
+//		bounds.set(getGridSize(),(int)(getFftHeight()+height*0.06),(int)(getGridSize()+width*0.1),height);
+//		c.drawRect(bounds, textPaint);
+
 	}
 
 

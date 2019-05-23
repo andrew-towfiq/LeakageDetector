@@ -2,11 +2,13 @@ package com.mantz_it.rfanalyzer;
 
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 	private FrameLayout fl_analyzerFrame = null;
 	private AnalyzerSurface analyzerSurface = null;
 	private AnalyzerProcessingLoop analyzerProcessingLoop = null;
+	private MyLocatoinProxy locationProxy = null;
 	private IQSourceInterface source = null;
 	private Scheduler scheduler = null;
 	private Demodulator demodulator = null;
@@ -101,6 +104,32 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 	private static final int HACKRF_SOURCE = 1;
 	private static final int RTLSDR_SOURCE = 2;
 	private static final String[] SOURCE_NAMES = new String[] {"filesource", "hackrf", "rtlsdr"};
+
+	/**
+	 * create location proxy and register it as a listener for location updates from system location manager
+	 */
+	private void createAndInitializeLocationProxy() {
+		locationProxy = new MyLocatoinProxy();
+		try {
+			LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+			locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, locationProxy);
+		}
+		catch(SecurityException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * deregister location proxy from receiving updates from system location manager
+	 */
+	private void stopLocationProxy() {
+		try {
+			LocationManager locationManager = ((LocationManager) getSystemService(Context.LOCATION_SERVICE));
+			locationManager.removeUpdates(locationProxy);
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -151,11 +180,13 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 			Log.e(LOGTAG, "onCreate: Cannot read version name: " + e.getMessage());
 		}
 
+		createAndInitializeLocationProxy();
+
 		// Get references to the GUI components:
 		fl_analyzerFrame = (FrameLayout) findViewById(R.id.fl_analyzerFrame);
 
 		// Create a analyzer surface:
-		analyzerSurface = new AnalyzerSurface(this,this);
+		analyzerSurface = new AnalyzerSurface(this,this, locationProxy);
 		analyzerSurface.setVerticalScrollEnabled(preferences.getBoolean(getString(R.string.pref_scrollDB), true));
 		analyzerSurface.setVerticalZoomEnabled(preferences.getBoolean(getString(R.string.pref_zoomDB), true));
 		analyzerSurface.setDecoupledAxis(preferences.getBoolean(getString(R.string.pref_decoupledAxis), false));
@@ -218,6 +249,9 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+		//
+		stopLocationProxy();
+
 		// close source
 		if(source != null && source.isOpen())
 			source.close();

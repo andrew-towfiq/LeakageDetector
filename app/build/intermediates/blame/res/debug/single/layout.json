@@ -68,12 +68,12 @@
         "source": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/layout/start_recording.xml",
-        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/layout/start_recording.xml"
-    },
-    {
         "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
         "source": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/layout/start_recording.xml",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/layout/start_recording.xml"
     },
     {
         "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",

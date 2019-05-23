@@ -4,6 +4,9 @@
 
     <!-- Read external storage is used for the FileSource -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" />
 
     <!-- Write external storage is used to write recordings and log files to the SD card -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

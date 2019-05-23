@@ -48,12 +48,12 @@
         "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_record_on.png"
     },
     {
-        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_full_screen.png",
-        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_full_screen.png"
-    },
-    {
         "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_gain.png",
         "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_gain.png"
+    },
+    {
+        "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_full_screen.png",
+        "source": "/Users/sanazk/Desktop/RFAnalyzer/app/src/main/res/drawable-hdpi/ic_action_full_screen.png"
     },
     {
         "merged": "/Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_demod_off.png",
