@@ -1,146 +1,118 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-MERGED from [:hackrf_android] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/aaf9df5469ca71040283bb2538eb0030/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/54eb0a32d24f6fb8f9b16d2c9603a9f4/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/93afd75de3fb4a19d6a0883e1d68fe65/AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/9bc95a1a936ae2b0962591cbe124a784/AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:support-v4:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/feea0dbbbe43b5669a9ad036d0d97ad9/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:2:1-52:12
 	package
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:3:5-38
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-	android:versionCode
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:1-52:12
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:6:5-80
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:6:5-80
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:6:22-77
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:6:22-77
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:7:5-79
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:7:22-76
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:8:5-81
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:8:22-78
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:8:22-78
 uses-feature#android.hardware.location.gps
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:9:5-66
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:9:5-66
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:9:19-63
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:9:19-63
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:12:5-81
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:12:22-78
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:12:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:15:5-67
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:15:5-67
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:15:22-64
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:15:22-64
 permission#com.mantz_it.rfanalyzer.permission.READ_BOOKMARKS
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:18:5-19:79
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:18:5-19:79
 	android:label
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:19:17-76
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:19:17-76
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:18:17-81
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:18:17-81
 permission#com.mantz_it.rfanalyzer.permission.WRITE_BOOKMARKS
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:20:5-21:80
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:20:5-21:80
 	android:label
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:21:17-77
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:20:17-82
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:20:17-82
 application
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:23:5-50:19
-MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/54eb0a32d24f6fb8f9b16d2c9603a9f4/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/54eb0a32d24f6fb8f9b16d2c9603a9f4/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/93afd75de3fb4a19d6a0883e1d68fe65/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/93afd75de3fb4a19d6a0883e1d68fe65/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/9bc95a1a936ae2b0962591cbe124a784/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/9bc95a1a936ae2b0962591cbe124a784/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/feea0dbbbe43b5669a9ad036d0d97ad9/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/feea0dbbbe43b5669a9ad036d0d97ad9/AndroidManifest.xml:22:5-20
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:23:5-50:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
 	android:label
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:26:9-41
-	android:icon
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:25:9-45
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:26:9-41
 	android:allowBackup
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:24:9-35
+	android:icon
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:25:9-45
 	android:theme
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:27:9-40
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:27:9-40
 activity#com.mantz_it.rfanalyzer.MainActivity
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:28:9-37:20
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:28:9-37:20
 	android:label
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:30:13-45
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:30:13-45
 	android:launchMode
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:31:13-43
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:31:13-43
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:29:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:32:13-36:29
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:29:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:33:17-69
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:33:25-66
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:35:17-77
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:35:27-74
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:35:27-74
 activity#com.mantz_it.rfanalyzer.SettingsActivity
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:39:9-42:20
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:39:9-42:20
 	android:parentActivityName
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:41:13-55
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:41:13-55
 	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:40:13-45
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:40:13-45
 provider#com.mantz_it.rfanalyzer.BookmarksProvider
-ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:44:9-49:20
+ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:44:9-49:20
 	android:readPermission
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:47:13-87
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:47:13-87
 	android:authorities
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:46:13-67
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:46:13-67
+	android:name
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:45:13-46
 	android:writePermission
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:48:13-89
-	android:name
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml:45:13-46
+		ADDED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml:48:13-89
 uses-sdk
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-MERGED from [:hackrf_android] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/aaf9df5469ca71040283bb2538eb0030/AndroidManifest.xml:7:5-9:41
-MERGED from [:hackrf_android] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/aaf9df5469ca71040283bb2538eb0030/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/54eb0a32d24f6fb8f9b16d2c9603a9f4/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/54eb0a32d24f6fb8f9b16d2c9603a9f4/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/93afd75de3fb4a19d6a0883e1d68fe65/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/93afd75de3fb4a19d6a0883e1d68fe65/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/9bc95a1a936ae2b0962591cbe124a784/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/9bc95a1a936ae2b0962591cbe124a784/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/feea0dbbbe43b5669a9ad036d0d97ad9/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/feea0dbbbe43b5669a9ad036d0d97ad9/AndroidManifest.xml:20:5-43
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
+INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [RFAnalyzer:hackrf_android:unspecified] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/RFAnalyzer/hackrf_android/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:5:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.3.0] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/54eb0a32d24f6fb8f9b16d2c9603a9f4/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.3.0] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		ADDED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/AndrewTowfiq/leakagedetector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sanazk/Desktop/RFAnalyzer/app/src/main/AndroidManifest.xml
 uses-feature#android.hardware.usb.host
-ADDED from [:hackrf_android] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/aaf9df5469ca71040283bb2538eb0030/AndroidManifest.xml:11:5-62
+ADDED from [RFAnalyzer:hackrf_android:unspecified] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/RFAnalyzer/hackrf_android/unspecified/AndroidManifest.xml:11:5-62
 	android:name
-		ADDED from [:hackrf_android] /Users/AndrewTowfiq/.gradle/caches/transforms-2/files-2.1/aaf9df5469ca71040283bb2538eb0030/AndroidManifest.xml:11:19-59
+		ADDED from [RFAnalyzer:hackrf_android:unspecified] /Users/sanazk/Desktop/RFAnalyzer/app/build/intermediates/exploded-aar/RFAnalyzer/hackrf_android/unspecified/AndroidManifest.xml:11:19-59
