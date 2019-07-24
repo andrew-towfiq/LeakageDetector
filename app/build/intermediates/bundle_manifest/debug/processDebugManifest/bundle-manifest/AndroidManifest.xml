@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mantz_it.rfanalyzer"
+    android:versionCode="1303"
+    android:versionName="1.13" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <!-- Read external storage is used for the FileSource -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <!-- Write external storage is used to write recordings and log files to the SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Internet is used to connect to local and remote rtl_tcp instances -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Declare permissions to read and write the bookmarks database -->
+    <permission
+        android:name="com.mantz_it.rfanalyzer.permission.READ_BOOKMARKS"
+        android:label="Read access to the bookmarks of RF Analyzer" />
+    <permission
+        android:name="com.mantz_it.rfanalyzer.permission.WRITE_BOOKMARKS"
+        android:label="Write access to the bookmarks of RF Analyzer" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.mantz_it.rfanalyzer.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mantz_it.rfanalyzer.SettingsActivity"
+            android:parentActivityName="com.mantz_it.rfanalyzer.MainActivity" >
+        </activity>
+
+        <provider
+            android:name="com.mantz_it.rfanalyzer.BookmarksProvider"
+            android:authorities="com.mantz_it.rfanalyzer.provider"
+            android:readPermission="com.mantz_it.rfanalyzer.permission.READ_BOOKMARKS"
+            android:writePermission="com.mantz_it.rfanalyzer.permission.WRITE_BOOKMARKS" >
+        </provider>
+    </application>
+
+</manifest>
