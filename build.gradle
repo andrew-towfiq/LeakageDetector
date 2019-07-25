@@ -18,4 +18,10 @@ allprojects {
         jcenter()
         google()
     }
+    
+android {
+      lintOptions {
+          abortOnError false
+      }
+  }
 }
