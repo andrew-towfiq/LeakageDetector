@@ -23,3 +23,9 @@ dependencies {
     implementation project(':hackrf_android')
     implementation 'com.android.support:appcompat-v7:23.3.0'
 }
+
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
