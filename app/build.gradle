@@ -9,7 +9,7 @@ android {
         targetSdkVersion 23
         versionCode 1303
         versionName "1.13"
-        archivesBaseName = "leakage-master-" + (System.env['BUILD_LABEL'] ? System.env['BUILD_LABEL'] : 'C0-0-0')
+        archivesBaseName = "leakage-master-" + (System.env['BUILD_LABEL'] ? System.env['BUILD_LABEL'] : 'R0.0.0')
     }
     buildTypes {
         release {
