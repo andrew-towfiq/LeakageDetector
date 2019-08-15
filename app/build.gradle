@@ -2,21 +2,27 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
+    def versionNumber = System.env['BUILD_LABEL']
 
     defaultConfig {
         applicationId "com.mantz_it.rfanalyzer"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1303
-        versionName "1.13"
+        versionName "${versionNumber}"
         archivesBaseName = "leakage-master-" + (System.env['BUILD_LABEL'] ? System.env['BUILD_LABEL'] : 'R0.0.0')
     }
     buildTypes {
+        debug {
+            versionNameSuffix ".debug"
+            resValue "string", "app_version", "${defaultConfig.versionName}${versionNameSuffix}"
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //versionNameSuffix "-super-release"
+            resValue "string", "app_version", "${defaultConfig.versionName}"
         }
+
     }
 }
 
